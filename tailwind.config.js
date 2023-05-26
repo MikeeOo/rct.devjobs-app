@@ -2,7 +2,12 @@
 export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                sans: ["Kumbh Sans", "sans-serif"],
+                mono: ["Space Mono", "monospace"],
+            },
+        },
     },
     plugins: [],
 };

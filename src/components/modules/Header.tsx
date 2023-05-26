@@ -1,30 +1,33 @@
 import { Link } from "react-router-dom";
 import Popup from "reactjs-popup";
-import { FaRegUserCircle, FiChevronDown, FiChevronUp } from "react-icons/all";
+import {
+    FaRegUserCircle,
+    FiChevronDown,
+    FiChevronUp,
+    FiLogIn,
+    MdOutlineAppRegistration,
+} from "react-icons/all";
 
-import Logo from "../../atoms/Logo";
+import Logo from "../atoms/Logo";
 
-type Props = {};
+type Props = {
+    children: JSX.Element;
+};
 
-export default function Header({}: Props): JSX.Element {
+export default function Header({ children }: Props): JSX.Element {
     return (
-        <div className="flex items-center justify-between bg-indigo-500 px-6 pb-20 pt-8">
+        <div className="relative flex items-center justify-between bg-[#272e5a] px-6 pb-20 pt-8">
             <Logo />
             <Popup
                 arrow={false}
                 closeOnDocumentClick
-                trigger={(open) => (
-                    <button className="flex items-center justify-between space-x-3 rounded-2xl bg-slate-800 px-4 py-3 text-lg">
+                trigger={(open: boolean): JSX.Element => (
+                    <button className="flex items-center justify-between space-x-3 rounded-md bg-white px-4 py-3 text-lg text-[#272e5a]">
+                        <FaRegUserCircle size="1.3rem" />
                         {open ? (
-                            <>
-                                <FaRegUserCircle size="1.3rem" />
-                                <FiChevronUp size="1.3rem" />
-                            </>
+                            <FiChevronUp size="1.3rem" />
                         ) : (
-                            <>
-                                <FaRegUserCircle size="1.3rem" />
-                                <FiChevronDown size="1.3rem" />
-                            </>
+                            <FiChevronDown size="1.3rem" />
                         )}
                     </button>
                 )}
@@ -32,14 +35,26 @@ export default function Header({}: Props): JSX.Element {
                 <nav className=" mt-4">
                     <ul>
                         <li className="">
-                            <Link to="/login">Login</Link>
+                            <div>
+                                <Link
+                                    to="/login"
+                                    className=" flex items-center"
+                                >
+                                    <FiLogIn />
+                                    Login
+                                </Link>
+                            </div>
                         </li>
                         <li>
-                            <Link to="/register">Register</Link>
+                            <Link to="/register" className=" flex items-center">
+                                <MdOutlineAppRegistration />
+                                Register
+                            </Link>
                         </li>
                     </ul>
                 </nav>
             </Popup>
+            {children}
         </div>
     );
 }
