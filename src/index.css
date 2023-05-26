@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .custom {
+        accent-color: #0aff11;
+    }
+}

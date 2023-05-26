@@ -8,7 +8,7 @@ export default function HomePage(): JSX.Element {
             <Header>
                 <Search />
             </Header>
-            <div className=" mt-64 font-sans text-3xl">
+            <div className="mt-64 font-sans text-3xl">
                 <p>Devjobs-app React front setup</p>
                 <Link to="test">Router Test</Link>
             </div>
