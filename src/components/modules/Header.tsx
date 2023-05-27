@@ -8,6 +8,8 @@ import {
     MdOutlineAppRegistration,
 } from "react-icons/all";
 
+import { Button } from "flowbite-react";
+
 import Logo from "../atoms/Logo";
 
 type Props = {
@@ -18,7 +20,8 @@ export default function Header({ children }: Props): JSX.Element {
     return (
         <div className="relative flex items-center justify-between bg-[#272e5a] px-6 pb-20 pt-8">
             <Logo />
-            <Popup
+
+            {/* <Popup
                 arrow={false}
                 closeOnDocumentClick
                 trigger={(open: boolean): JSX.Element => (
@@ -53,7 +56,7 @@ export default function Header({ children }: Props): JSX.Element {
                         </li>
                     </ul>
                 </nav>
-            </Popup>
+            </Popup> */}
             {children}
         </div>
     );

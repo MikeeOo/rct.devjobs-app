@@ -1,6 +1,6 @@
 import Popup from "reactjs-popup";
 import { RiFilter2Fill, AiOutlineSearch, MdLocationOn } from "react-icons/all";
-import Checkbox from "react-custom-checkbox";
+// import Checkbox from "react-custom-checkbox";
 
 type Props = {};
 
@@ -27,10 +27,10 @@ export default function Search({}: Props) {
                             placeholder="Filter by location..."
                         />
                     </div>
-                    <label className=" block space-x-4 p-6">
+                    {/* <label className=" block space-x-4 p-6">
                         <Checkbox />
                         <span> Full Time Only</span>
-                    </label>
+                    </label> */}
                     <button className="block w-full bg-[#5964E0] p-4 text-center">
                         Search
                     </button>
