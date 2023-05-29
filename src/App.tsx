@@ -1,23 +1,12 @@
 import { RouterProvider } from "react-router-dom";
 import { Flowbite } from "flowbite-react";
-import type { CustomFlowbiteTheme } from "flowbite-react";
+import { customTheme } from "./theme";
 import { router } from "./router";
-
-const customTheme: CustomFlowbiteTheme = {
-    button: {
-        color: {
-            primary: "#FFFFF",
-        },
-        outline: {
-            color: "red",
-        },
-    },
-};
 
 export default function App(): JSX.Element {
     return (
         <Flowbite theme={{ theme: customTheme }}>
-            <div className="h-screen bg-black text-white">
+            <div className="h-screen bg-[#111827] text-white">
                 <RouterProvider router={router} />
             </div>
         </Flowbite>
