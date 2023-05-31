@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { get } from "../../utils/apiUtils";
+import JobCard from "../elements/JobCard";
 
 type Props = {};
 
@@ -17,12 +18,10 @@ export default function Display({}: Props) {
     console.log(jobs);
 
     return (
-        <div>
-            <ul>
-                {jobs.map((job) => (
-                    <li>{job.company}</li>
-                ))}
-            </ul>
-        </div>
+        <ul>
+            {jobs.map((job: any) => (
+                <JobCard key={job._id} {...job} />
+            ))}
+        </ul>
     );
 }

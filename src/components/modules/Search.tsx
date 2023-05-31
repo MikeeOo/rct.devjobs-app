@@ -8,7 +8,7 @@ export default function Search({}: Props) {
     const [show, setShow] = useState(false);
     return (
         <>
-            <div className=" mx-auto my-10 flex w-full max-w-[90%] gap-1">
+            <div className=" mx-auto mb-12 mt-10 flex w-full max-w-[90%] gap-1">
                 <TextInput
                     sizing="md"
                     type="text"
