@@ -4,10 +4,10 @@ import Display from "../modules/Display";
 
 export default function HomePage(): JSX.Element {
     return (
-        <div>
+        <>
             <Header />
             <Search />
             <Display />
-        </div>
+        </>
     );
 }

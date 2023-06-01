@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import HomePage from "./components/pages/HomePage";
+import JobPage from "./components/pages/JobPage";
 
 export const router = createBrowserRouter([
     {
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
         element: <div>TEST Register</div>,
     },
     {
-        path: "/test",
-        element: <div>TEST Test</div>,
+        path: "/job/:id",
+        element: <JobPage />,
     },
 ]);
