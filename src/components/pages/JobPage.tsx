@@ -98,7 +98,10 @@ export default function JobPage({}: Props) {
                     </p>
                     <ul>
                         {job.requirements?.items?.map((requirement) => (
-                            <li className="mb-3 flex gap-4 dark:text-gray-400 ">
+                            <li
+                                key={crypto.randomUUID()}
+                                className="mb-3 flex gap-4 dark:text-gray-400 "
+                            >
                                 <div>🍆</div>
                                 <p>{requirement}</p>
                             </li>
@@ -112,7 +115,10 @@ export default function JobPage({}: Props) {
                     </p>
                     <ul>
                         {job.role?.items?.map((requirement) => (
-                            <li className="mb-3 flex gap-4 dark:text-gray-400 ">
+                            <li
+                                key={crypto.randomUUID()}
+                                className="mb-3 flex gap-4 dark:text-gray-400 "
+                            >
                                 <div>🍆</div>
                                 <p>{requirement}</p>
                             </li>

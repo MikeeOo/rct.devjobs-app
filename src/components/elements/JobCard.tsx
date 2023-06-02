@@ -21,7 +21,7 @@ export default function JobCard({
     return (
         <li className="pb-12">
             <Link to={`/job/${_id}`}>
-                <Card href="#" className=" relative mx-auto w-full max-w-[90%]">
+                <Card className=" relative mx-auto w-full max-w-[90%] hover:bg-gray-700">
                     <div className=" absolute left-6 top-0 flex h-[3.125rem] w-[3.125rem] -translate-y-2/4 transform items-center justify-center rounded-xl bg-gradient-to-tr from-[#0891B2] to-[#6C2BD9] font-mono text-xl font-bold">
                         xD
                     </div>
