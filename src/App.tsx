@@ -1,14 +1,10 @@
 import { RouterProvider } from "react-router-dom";
-import { Flowbite } from "flowbite-react";
-import { customTheme } from "./theme";
 import { router } from "./router";
 
 export default function App(): JSX.Element {
     return (
-        <Flowbite theme={{ theme: customTheme }}>
-            <div className="min-h-screen bg-[#111827] text-white">
-                <RouterProvider router={router} />
-            </div>
-        </Flowbite>
+        <div className="min-h-screen bg-[#111827] text-white">
+            <RouterProvider router={router} />
+        </div>
     );
 }
