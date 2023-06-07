@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import HomePage from "./components/pages/HomePage";
+import RegisterPage from "./components/pages/RegisterPage";
+import LoginPage from "./components/pages/LoginPage";
 import JobPage from "./components/pages/JobPage";
 import AddJobPage from "./components/pages/AddJobPage";
 
@@ -11,11 +13,11 @@ export const router = createBrowserRouter([
     },
     {
         path: "/login",
-        element: <div>TEST Login</div>,
+        element: <LoginPage />,
     },
     {
         path: "/register",
-        element: <div>TEST Register</div>,
+        element: <RegisterPage />,
     },
     {
         path: "/job/:id",

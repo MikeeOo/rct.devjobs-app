@@ -38,10 +38,14 @@ export default function Header({}: Props): JSX.Element {
                     </Dropdown>
                 ) : (
                     <>
-                        <Button color="primary">Log in</Button>
-                        <Button outline gradientDuoTone="purpleToBlue">
-                            Sign up
-                        </Button>
+                        <Link to="/login">
+                            <Button color="primary">Log in</Button>
+                        </Link>
+                        <Link to="/register">
+                            <Button outline gradientDuoTone="purpleToBlue">
+                                Sign up
+                            </Button>
+                        </Link>
                     </>
                 )}
             </div>
