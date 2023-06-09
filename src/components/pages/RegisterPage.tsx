@@ -32,6 +32,7 @@ export default function RegisterPage({}: Props) {
                                             id="email"
                                             name="email"
                                             type="email"
+                                            autoComplete="email"
                                             className="input w-full rounded-none border-b-accent-content border-l-primary 
                                             border-r-primary border-t-primary bg-primary pl-10 text-white shadow-accent-content focus:outline-none"
                                         />
@@ -50,6 +51,7 @@ export default function RegisterPage({}: Props) {
                                             id="password"
                                             name="password"
                                             type="password"
+                                            autoComplete="new-password"
                                             className="input w-full rounded-none border-b-accent-content border-l-primary border-r-primary border-t-primary bg-primary pl-10 
                                             text-white shadow-accent-content focus:outline-none"
                                         />
@@ -71,6 +73,7 @@ export default function RegisterPage({}: Props) {
                                             id="repeatedPassword"
                                             name="repeatedPassword"
                                             type="password"
+                                            autoComplete="new-password"
                                             className="input w-full rounded-none border-b-accent-content border-l-primary border-r-primary border-t-primary bg-primary pl-10 
                                             text-white shadow-accent-content focus:outline-none"
                                         />
