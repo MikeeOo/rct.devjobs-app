@@ -22,13 +22,14 @@ export default function RegisterPage({}: Props) {
                         <Form>
                             <div className="card bg-primary py-2">
                                 <div className="form-control py-2">
-                                    <label className="label">
+                                    <label htmlFor="email" className="label">
                                         <span className="label-text text-accent-content">
                                             Email
                                         </span>
                                     </label>
                                     <div className="relative text-neutral-content focus-within:text-accent-content">
                                         <Field
+                                            id="email"
                                             name="email"
                                             type="email"
                                             className="input w-full rounded-none border-b-accent-content border-l-primary 
@@ -39,13 +40,14 @@ export default function RegisterPage({}: Props) {
                                 </div>
 
                                 <div className="form-control py-2">
-                                    <label className="label">
+                                    <label htmlFor="password" className="label">
                                         <span className="label-text text-accent-content">
                                             Password
                                         </span>
                                     </label>
                                     <div className="relative text-neutral-content focus-within:text-accent-content">
                                         <Field
+                                            id="password"
                                             name="password"
                                             type="password"
                                             className="input w-full rounded-none border-b-accent-content border-l-primary border-r-primary border-t-primary bg-primary pl-10 
@@ -56,13 +58,17 @@ export default function RegisterPage({}: Props) {
                                 </div>
 
                                 <div className="form-control py-2">
-                                    <label className="label">
+                                    <label
+                                        htmlFor="repeatedPassword"
+                                        className="label"
+                                    >
                                         <span className="label-text text-accent-content">
                                             Repeat password
                                         </span>
                                     </label>
                                     <div className="relative text-neutral-content focus-within:text-accent-content">
                                         <Field
+                                            id="repeatedPassword"
                                             name="repeatedPassword"
                                             type="password"
                                             className="input w-full rounded-none border-b-accent-content border-l-primary border-r-primary border-t-primary bg-primary pl-10 
