@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
 import { RiFilter2Fill, AiOutlineSearch, MdLocationOn } from "react-icons/all";
 import Theme from "../elements/Theme";
@@ -6,7 +5,6 @@ import Theme from "../elements/Theme";
 type Props = {};
 
 export default function Search({}: Props) {
-    const [show, setShow] = useState(false);
     return (
         <>
             <Theme />
@@ -17,14 +15,32 @@ export default function Search({}: Props) {
                     placeholder="Filter by title, companies, expertise…"
                     className="w-full"
                 />
-                <Button onClick={() => setShow(true)} color="primary">
+                <Button
+                    onClick={() => window.my_modal_1.showModal()}
+                    color="primary"
+                >
                     <RiFilter2Fill size="1.25rem" />
                 </Button>
+                {/* <Button onClick={() => setShow(true)} color="primary">
+                    <RiFilter2Fill size="1.25rem" />
+                </Button> */}
                 <Button outline gradientDuoTone="purpleToBlue">
                     <AiOutlineSearch size="1.25rem" />
                 </Button>
             </div>
-            <Modal
+            <dialog id="my_modal_1" className="modal">
+                <form method="dialog" className="modal-box">
+                    <h3 className="text-lg font-bold">Hello!</h3>
+                    <p className="py-4">
+                        Press ESC key or click the button below to close
+                    </p>
+                    <div className="modal-action">
+                        {/* if there is a button in form, it will close the modal */}
+                        <button className="btn">Close</button>
+                    </div>
+                </form>
+            </dialog>
+            {/* <Modal
                 show={show}
                 onClose={() => setShow(false)}
                 popup
@@ -60,7 +76,7 @@ export default function Search({}: Props) {
                         Search
                     </Button>
                 </Modal.Body>
-            </Modal>
+            </Modal> */}
         </>
     );
 }
