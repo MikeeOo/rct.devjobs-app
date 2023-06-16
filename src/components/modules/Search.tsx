@@ -30,14 +30,20 @@ export default function Search({}: Props) {
             </div>
             <dialog id="my_modal_1" className="modal">
                 <form method="dialog" className="modal-box">
+                    <button className="btn-ghost btn-sm btn-circle btn absolute right-2 top-2">
+                        ✕
+                    </button>
                     <h3 className="text-lg font-bold">Hello!</h3>
                     <p className="py-4">
-                        Press ESC key or click the button below to close
+                        Press ESC key or click on ✕ button to close
                     </p>
-                    <div className="modal-action">
-                        {/* if there is a button in form, it will close the modal */}
-                        <button className="btn">Close</button>
-                    </div>
+                    <Button
+                        outline
+                        gradientDuoTone="purpleToBlue"
+                        className=" mt-4 w-full"
+                    >
+                        Search
+                    </Button>
                 </form>
             </dialog>
             {/* <Modal
