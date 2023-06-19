@@ -1,13 +1,11 @@
 import { Button, Checkbox, Label, Modal, TextInput } from "flowbite-react";
 import { RiFilter2Fill, AiOutlineSearch, MdLocationOn } from "react-icons/all";
-import Theme from "../elements/Theme";
 
 type Props = {};
 
 export default function Search({}: Props) {
     return (
         <>
-            <Theme />
             <div className=" mx-auto mb-12 mt-10 flex w-full max-w-[90%] gap-1">
                 <TextInput
                     sizing="md"
