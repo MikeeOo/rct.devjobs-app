@@ -1,4 +1,5 @@
 import { Formik, Field, Form } from "formik";
+import { Link } from "react-router-dom";
 import { AiFillLock, AiOutlineMail, AiFillUnlock } from "react-icons/all";
 
 type Props = {};
@@ -8,7 +9,18 @@ export default function RegisterPage({}: Props) {
         <div className="flex h-screen items-center justify-center">
             <div className="card w-full max-w-[90%] bg-primary shadow-xl">
                 <div className="card-body">
-                    <h2 className="card-title">Sign up</h2>
+                    <div className="flex flex-col">
+                        <h2 className="card-title">Sign up</h2>
+                        <div className="pt-5">
+                            Already have an account? &nbsp;
+                            <Link
+                                to="/login"
+                                className="link hover:text-neutral-content"
+                            >
+                                Sign In
+                            </Link>
+                        </div>
+                    </div>
                     <Formik
                         initialValues={{
                             email: "",
@@ -20,7 +32,7 @@ export default function RegisterPage({}: Props) {
                         }}
                     >
                         <Form>
-                            <div className="card bg-primary py-2">
+                            <div className="card bg-primary">
                                 <div className="form-control py-2">
                                     <label htmlFor="email" className="label">
                                         <span className="label-text text-accent-content">
@@ -81,7 +93,7 @@ export default function RegisterPage({}: Props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="card-actions justify-end">
+                            <div className="card-actions justify-end pt-5">
                                 <button
                                     type="submit"
                                     className="btn bg-base-100 hover:bg-base-200 hover:text-accent-content focus:outline-none"
